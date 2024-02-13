@@ -52,13 +52,13 @@ Other options are available for ``mk_prepare_ligand.py`` by typing ``mk_prepare_
 
 Now, we have to define the grid space for the docking, typically, a 3D box around a the potential binding site of a receptor. During this step, we will create the input file for AutoGrid4, which will create an affinity map file for each atom types. The grid parameter file specifies an AutoGrid4 calculation, including the size and location of the grid, the atom types that will be used, the coordinate file for the rigid receptor, and other parameters for calculation of the grids.
 
-To prepare the gpf file for AutoGrid4, you can use the ``prepare_gpf.py`` command line tool.
+To prepare the gpf file for AutoGrid4, you can use the ``prepare_gpf4.py`` command line tool.
 
 .. code-block:: bash
 
-    $ pythonsh <script_directory>/prepare_gpf.py -l 1iep_ligand.pdbqt -r 1iep_receptor.pdbqt -y
+    $ pythonsh <script_directory>/prepare_gpf4.py -l 1iep_ligand.pdbqt -r 1iep_receptor.pdbqt -y
 
-The option ``-y`` specifies that we want to center automatically the grid around the ligand. For more information about ``prepare_gpf.py``, type ``pythonsh prepare_gpf.py -h``. At the end you should obtain the following GPF file ``1iep_receptor.gpf`` containing those lines:
+The option ``-y`` specifies that we want to center automatically the grid around the ligand. For more information about ``prepare_gpf4.py``, type ``pythonsh prepare_gpf4.py -h``. At the end you should obtain the following GPF file ``1iep_receptor.gpf`` containing those lines:
 
 
 .. code-block:: console
